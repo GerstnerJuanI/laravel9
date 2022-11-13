@@ -1,8 +1,13 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 @section('title','Blog')
 @section('meta-description','blog meta description')
 
 @section('content')
 <h1>Blog</h1>
 
-@endsection
+@endsection --}}
+<x-layouts.app title="Blog"
+    meta-description="Blog meta description"
+>
+    <h1>Blog</h1>
+</x-layouts.app>
