@@ -3,17 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = [
-            ['title' => '1er post'],
-            ['title' => '2do post'],
-            ['title' => '3ro post'],
-            ['title' => '4to post']
-        ];
+        $posts = DB::table('posts')->get();
         return view('blog',['posts' => $posts]);    
     }
     

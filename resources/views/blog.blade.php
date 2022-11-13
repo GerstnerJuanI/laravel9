@@ -8,9 +8,7 @@
 @endsection --}}
 <x-layouts.app title="Blog" meta-description="Blog meta description">
     <h1>Blog</h1>
-    <ul>
         @foreach ($posts as $post)
-            <li>{{ $post['title'] }}</li>
+            <h2>{{ $post->title }}</h2>
         @endforeach
-    </ul>
 </x-layouts.app>
